@@ -12,7 +12,7 @@ public class CalculatorController {
     private TextField display;
 
     private Calculator calculator;
-    private boolean startNumber = true;
+    private boolean startNumber = true, isFloat = false;
     private double number1;
     private String operator = "";
 
@@ -43,7 +43,11 @@ public class CalculatorController {
            }
            double number2 = Double.parseDouble(display.getText());
            double result = calculator.calculate(number1, number2, operator);
-           display.setText(String.format("%.0f", result));
+           if(isFloat){
+               display.setText(String.format("%s", result));
+           } else {
+               display.setText(String.format("%.0f", result));
+           }
            operator = "";
         } else {
             if (! operator.isEmpty()) {
@@ -53,6 +57,27 @@ public class CalculatorController {
             operator = operatorPressed;
             startNumber = true;
         }
+    }
+
+    @FXML
+    public void clearDisplay(ActionEvent event){
+        String pressedAC = ((Button) event.getSource()).getText();
+        System.out.println(pressedAC);
+        startNumber = true;
+        operator = "";
+        display.setText("0");
+        isFloat = false;
+    }
+
+    @FXML
+    public void processFloat(ActionEvent event){
+        String pressedDot = ((Button) event.getSource()).getText();
+        System.out.println(pressedDot);
+        if(isFloat) {
+            return;
+        }
+        display.setText(display.getText() + ".");
+        isFloat = true;
     }
 
 }

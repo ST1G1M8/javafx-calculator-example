@@ -16,6 +16,7 @@
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -39,6 +40,9 @@
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#processDigit" text="0" GridPane.rowIndex="3" />
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#processOperator" style="-fx-background-color: lightgreen;" text="=" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#processOperator" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clearDisplay" style="-fx-background-color: indianred;" text="AC" GridPane.columnIndex="4" />
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#processFloat" text="." GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="±" GridPane.columnIndex="4" GridPane.rowIndex="2" />
          </children>
       </GridPane>
    </children>
