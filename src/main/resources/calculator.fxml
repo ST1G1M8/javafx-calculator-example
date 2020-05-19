@@ -42,7 +42,7 @@
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#processOperator" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3" />
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#clearDisplay" style="-fx-background-color: indianred;" text="AC" GridPane.columnIndex="4" />
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#processFloat" text="." GridPane.columnIndex="4" GridPane.rowIndex="1" />
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="±" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#processNegate" text="±" GridPane.columnIndex="4" GridPane.rowIndex="2" />
          </children>
       </GridPane>
    </children>

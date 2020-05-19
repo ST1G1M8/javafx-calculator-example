@@ -80,4 +80,17 @@ public class CalculatorController {
         isFloat = true;
     }
 
+    @FXML
+    public void processNegate(ActionEvent event){
+        String pressedNegate = ((Button) event.getSource()).getText();
+        System.out.println(pressedNegate);
+        if(display.getText().equals("0")) {
+            return;
+        } else if(display.getText().charAt(0) == '-') {
+            display.setText(display.getText().substring(1));
+        } else {
+            display.setText("-" + display.getText());
+        }
+    }
+
 }
